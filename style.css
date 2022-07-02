@@ -137,16 +137,44 @@ ul[role="list"] {
 
 .article-content {
 	grid-area: article-content;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 15px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	gap: 20px 20px;
 }
 
 .article-content .card {
 	background-color: var(--contrast);
 	color: var(--medium);
-	height: 200px;
 	padding: 5px;
+	width: 300px;
+	height: 200px;
+	border-radius: 5px;
+	display: grid;
+	align-items: start;
+	grid-template:
+		"card-title card-title" 1fr
+		"card-text card-text" 2fr
+		". card-interact";
+	row-gap: 5px;
+}
+
+.card h2 {
+	grid-area: card-title;
+}
+
+.card p {
+	grid-area: card-text;
+}
+
+.interact {
+	grid-area: card-interact;
+	align-self: end;
+}
+
+.interact .icon {
+	margin: 5px;
 }
 
 .title {
