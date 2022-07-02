@@ -4,11 +4,10 @@
 }
 
 :root {
-	--leafgreen: #14322b;
-	--mintgreen: #4b6b56;
-	--seagreen: #2c5a4a;
-	--palepink: #c7b8ba;
-	--tan: #ab8d5a;
+	--dark: #25100b;
+	--medium: #451c19;
+	--light: #f3cb70;
+	--contrast: #ef611b;
 }
 
 .container {
@@ -22,8 +21,8 @@
 
 .header {
 	grid-area: header;
-	background-color: var(--mintgreen);
-	color: var(--palepink);
+	background-color: var(--contrast);
+	color: var(--light);
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	grid-template-areas: "search account" "greeting tasks";
@@ -48,7 +47,7 @@
 
 .sidebar {
 	grid-area: sidebar;
-	background-color: var(--leafgreen);
+	background-color: var(--dark);
 	padding: 15px;
 	display: grid;
 	grid-template:
@@ -56,7 +55,7 @@
 		"nav"
 		"help";
 	align-items: start;
-	color: var(--palepink);
+	color: var(--light);
 }
 
 .sidebar ul {
@@ -77,7 +76,7 @@
 
 .main-content {
 	grid-area: main-content;
-	background-color: var(--palepink);
+	background-color: var(--light);
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	grid-template-areas: "articles news" "articles socials";
@@ -95,7 +94,7 @@
 
 .article-header {
 	grid-area: article-header;
-	color: var(--leafgreen);
+	color: var(--dark);
 }
 
 .article-content {
@@ -106,32 +105,32 @@
 }
 
 .article-content .card {
-	background-color: var(--tan);
-	color: var(--leafgreen);
+	background-color: var(--contrast);
+	color: var(--medium);
 	height: 250px;
 }
 
 .title {
-	color: var(--browngreen);
+	color: var(--dark);
 }
 
 .news {
 	grid-area: news;
 
-	color: var(--leafgreen);
+	color: var(--medium);
 }
 
 .news-content .card {
-	background-color: var(--tan);
+	background-color: var(--contrast);
 }
 
 .socials {
 	grid-area: socials;
-	color: var(--leafgreen);
+	color: var(--dark);
 }
 
 .trending {
-	background-color: var(--tan);
+	background-color: var(--contrast);
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-template: "icon content";
@@ -144,4 +143,8 @@
 
 .trend-content {
 	grid-area: content;
+}
+
+.trend-text {
+	color: var(--medium);
 }
