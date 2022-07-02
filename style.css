@@ -15,7 +15,7 @@
 	display: grid;
 	grid-template-columns: 1fr 4fr;
 	grid-template:
-		"sidebar header"
+		"sidebar header" fit-content(300px)
 		"sidebar main-content";
 }
 
@@ -31,6 +31,13 @@
 }
 .search {
 	grid-area: search;
+}
+.search-box {
+	display: inline-block;
+	height: 25px;
+	width: 500px;
+	background-color: var(--light);
+	border-radius: 25px;
 }
 
 .greeting {
@@ -142,6 +149,7 @@ ul[role="list"] {
 .trending img {
 	grid-area: icon;
 }
+justify-content: start;
 
 .trend-content {
 	grid-area: content;
