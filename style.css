@@ -22,7 +22,7 @@
 .header {
 	grid-area: header;
 	background-color: var(--contrast);
-	color: var(--light);
+	color: var(--dark);
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	grid-template-areas: "search account" "greeting tasks";
@@ -51,27 +51,29 @@
 	padding: 15px;
 	display: grid;
 	grid-template:
-		"logo"
-		"nav"
-		"help";
+		"logo" auto
+		"nav" auto
+		"support" 1fr;
 	align-items: start;
 	color: var(--light);
 }
 
-.sidebar ul {
+ul[role="list"] {
 	list-style: none;
 }
 
 .logo {
 	grid-area: logo;
+	margin-bottom: 40px;
 }
 
 .nav {
 	grid-area: nav;
+	margin-bottom: 40px;
 }
 
-.help {
-	grid-area: help;
+.support {
+	grid-area: support;
 }
 
 .main-content {
@@ -147,4 +149,26 @@
 
 .trend-text {
 	color: var(--medium);
+}
+
+.icon {
+	filter: invert(88%) sepia(17%) saturate(1301%) hue-rotate(338deg) brightness(98%) contrast(94%);
+}
+
+li {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template: "sidebar-icon sidebar-text";
+	justify-content: start;
+	align-items: center;
+	gap: 15px;
+	margin: 15px;
+}
+
+li img {
+	grid-area: sidebar-icon;
+}
+
+li p {
+	grid-area: sidebar-text;
 }
