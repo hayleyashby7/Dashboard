@@ -5,6 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Raleway:wght@300&display=swap" rel="stylesheet" />
 		<title>TTRPG Dashboard</title>
 	</head>
 	<body>
@@ -14,7 +17,7 @@
 					<ul class="logo-list" role="list">
 						<li>
 							<img src="/images/dice-d20-outline.svg" alt="d20 dice logo" class="icon" />
-							<p class="sidebar-header">TTRPG Dashboard</p>
+							<p class="sidebar-header">Dashboard</p>
 						</li>
 					</ul>
 				</div>
@@ -64,13 +67,17 @@
 				</div>
 			</div>
 
-			<div class="header">
+			<div class="header shadow">
 				<div class="search">
 					<img src="/images/magnify.svg" alt="search icon" class="icon" />
 					<div class="search-box"></div>
 				</div>
-				<div class="greeting">Hi there, Hayley Ashby (@hayley)</div>
-				<div class="account">Hayley Ashby</div>
+				<div class="greeting">For all your Table Top RPG needs...</div>
+				<div class="account">
+					<img src="/images/bell-ring-outline.svg" alt="notification icon" class="notification icon" />
+					<img src="/images/dice-d20-outline.svg" alt="d20 dice logo" class="profile icon" />
+					<p class="name">Hayley Ashby</p>
+				</div>
 				<div class="tasks"><button class="button">New</button><button class="button">Upload</button><button class="button">Share</button></div>
 			</div>
 
@@ -78,43 +85,45 @@
 				<div class="articles">
 					<div class="article-header"><h1>Latest Articles</h1></div>
 					<div class="article-content">
-						<div class="card">
+						<div class="card shadow">
 							<h2 class="title">What snacks should you bring to game night?</h2>
 							<p>We rank the 10 best game night snacks, guaranteed to leave your tummy full and dice tray free from crumbs!</p>
 						</div>
-						<div class="card">
+						<div class="card shadow">
 							<h2 class="title">Tales from the Table</h2>
 							<p>This week's tale: How one half-orc fighter stubbornly hopped to freedom just to spite his captors.</p>
 						</div>
-						<div class="card">
+						<div class="card shadow">
 							<h2 class="title">Greatest TTRPG enemies: The Door</h2>
 							<p>PC's can fell the mightest ancient dragon, yet their greatest foe will always be simple door.</p>
 						</div>
-						<div class="card">
+						<div class="card shadow">
 							<h2 class="title">Does keeping your D20 with 20 face up improve it's crit chances?</h2>
 							<p>We've all heard the rumours, but what does the science say? The results may suprise you...</p>
 						</div>
-						<div class="card">
+						<div class="card shadow">
 							<h2 class="title">Spellcasters 101</h2>
 							<p>I didn't ask how big the room was, I said I cast Fireball. Just Fireball.</p>
 						</div>
-						<div class="card">
+						<div class="card shadow">
 							<h2 class="title">How to keep NPC's alive</h2>
 							<p>The worst threat to NPCs isn't the local goblin horde but when PC's come to town. Here's some tips to keep them alive in the face of loot-crazed players.</p>
 						</div>
 					</div>
 				</div>
 				<div class="news">
-					<div class="news-header"><h1>News</h1></div>
+					<div class="news-header title"><h1>News</h1></div>
 					<div class="news-content">
 						<div class="card">
 							<h2 class="title">Site Maintenance</h2>
 							<p>We're fixing all those bugs at last, 01:00-04:00 every Sunday.</p>
 						</div>
+						<hr />
 						<div class="card">
 							<h2 class="title">Mod Talk</h2>
 							<p>Come and peek behind the curtain on our Discord channel at 20:00 this Friday.</p>
 						</div>
+						<hr />
 						<div class="card">
 							<h2 class="title">Updated Privacy Policy</h2>
 							<p>Updated to clarify we aren't selling your data or storing it in plain text.</p>
@@ -122,12 +131,12 @@
 					</div>
 				</div>
 				<div class="socials">
-					<div class="social-header"><h1>Trending</h1></div>
+					<div class="social-header title"><h1>Trending</h1></div>
 					<div class="social-content">
 						<div class="trending">
-							<img src="/images/sword.svg" alt="sword icon" class="icon" />
+							<img src="/images/book.svg" alt="book icon" class="icon" />
 							<div class="trend-content">
-								<h2>@LoreWeaver</h2>
+								<h2>@loremaster</h2>
 								<p class="trend-text">Power of fate in his hands</p>
 							</div>
 						</div>

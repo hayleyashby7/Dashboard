@@ -17,6 +17,7 @@
 	grid-template:
 		"sidebar header" fit-content(300px)
 		"sidebar main-content";
+	font-family: "Raleway", sans-serif;
 }
 
 .header {
@@ -24,14 +25,16 @@
 	background-color: var(--contrast);
 	color: var(--dark);
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	grid-template-areas: "search account" "greeting tasks";
 	gap: 15px;
 	padding: 15px;
 }
+
 .search {
 	grid-area: search;
 }
+
 .search-box {
 	display: inline-block;
 	height: 25px;
@@ -46,10 +49,34 @@
 
 .account {
 	grid-area: account;
+	justify-self: end;
+}
+
+.account * {
+	margin: 5px;
+	float: left;
+}
+
+.name {
+	font-size: 20px;
+	display: inline-block;
 }
 
 .tasks {
 	grid-area: tasks;
+	align-items: start;
+	justify-self: end;
+}
+
+.button {
+	background-color: var(--medium);
+	border: 1px solid var(--medium);
+	color: var(--light);
+	font-size: 16px;
+	padding: 8px 24px;
+	border-radius: 25px;
+	display: inline-block;
+	margin: 0px 5px;
 }
 
 .sidebar {
@@ -72,6 +99,8 @@ ul[role="list"] {
 .logo {
 	grid-area: logo;
 	margin-bottom: 40px;
+	font-family: "MedievalSharp", cursive;
+	font-size: 24px;
 }
 
 .nav {
@@ -98,7 +127,7 @@ ul[role="list"] {
 	display: grid;
 	grid-template-rows: 50px auto;
 	grid-template-areas: "article-header" "article-content";
-	gap: 15px;
+	gap: 5px;
 }
 
 .article-header {
@@ -116,7 +145,8 @@ ul[role="list"] {
 .article-content .card {
 	background-color: var(--contrast);
 	color: var(--medium);
-	height: 250px;
+	height: 200px;
+	padding: 5px;
 }
 
 .title {
@@ -125,12 +155,15 @@ ul[role="list"] {
 
 .news {
 	grid-area: news;
-
 	color: var(--medium);
 }
 
-.news-content .card {
+.news-content {
 	background-color: var(--contrast);
+}
+
+.news-content .card {
+	padding: 10px;
 }
 
 .socials {
@@ -138,18 +171,22 @@ ul[role="list"] {
 	color: var(--dark);
 }
 
-.trending {
+.social-content {
 	background-color: var(--contrast);
+}
+
+.trending {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-template: "icon content";
 	justify-content: start;
+	gap: 15px;
+	padding: 10px;
 }
 
 .trending img {
 	grid-area: icon;
 }
-justify-content: start;
 
 .trend-content {
 	grid-area: content;
@@ -161,6 +198,11 @@ justify-content: start;
 
 .icon {
 	filter: invert(88%) sepia(17%) saturate(1301%) hue-rotate(338deg) brightness(98%) contrast(94%);
+}
+
+.shadow {
+	box-shadow: 1px 2px 5px var(--dark);
+	position: relative;
 }
 
 li {
@@ -179,4 +221,9 @@ li img {
 
 li p {
 	grid-area: sidebar-text;
+}
+
+hr {
+	border: 1px solid var(--light);
+	margin: 0px 25px;
 }
